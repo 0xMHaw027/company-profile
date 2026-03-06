@@ -5,7 +5,7 @@
 // ================================
 .skills {
   background-color: $color-white;
-  padding: $spacing-xs 0;
+  padding: $spacing-2xl 0;
 
   // ================================
   // CONTAINER
@@ -16,7 +16,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 $spacing-md;
-    gap: $spacing-2xl;
+    gap: $spacing-xl;
   }
 
   // ================================
@@ -42,8 +42,8 @@
   // ================================
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: $spacing-lg;
+    grid-template-columns: repeat(2, 1fr); // ← mobile: 2 kolom
+    gap: $spacing-md;
     width: 100%;
   }
 
@@ -75,7 +75,6 @@
       transition: color 0.3s ease;
     }
 
-    // Hover effect
     &:hover {
       background-color: $color-black;
 
@@ -103,7 +102,7 @@
     }
 
     &__grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, 1fr); // ← tablet: 4 kolom
       gap: $spacing-lg;
     }
 
@@ -129,7 +128,7 @@
     }
 
     &__grid {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr); // ← desktop: 5 kolom
       gap: $spacing-2xl;
     }
 
