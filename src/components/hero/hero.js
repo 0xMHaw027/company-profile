@@ -66,7 +66,7 @@ const Hero = () => {
   };
 
   setTimeout(() => {
-    typeText(typedName, "0xMHaw00", () => {
+    typeText(typedName, "0xMHaw", () => {
       typeText(typedRole, "WebDEV", () => {
         typeText(typedLocation, "Indonesia.");
       });

@@ -1,4 +1,5 @@
 import "./header.scss";
+import logoImage from "../../assets/images/logo.png"; // ← tambah ini
 
 const Header = () => {
   const header = document.createElement("header");
@@ -8,7 +9,7 @@ const Header = () => {
     <nav class="header__nav">
       <div class="header__logo">
         <span class="header__logo-icon">
-          <img src="/src/assets/images/logo.png" alt="Company Logo">
+         <img src="${logoImage}" alt="Company Logo">
         </span>
         <span class="header__logo-text"></span>
       </div>
