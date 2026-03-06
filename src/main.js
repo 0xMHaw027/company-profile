@@ -7,7 +7,6 @@ import Contact from "./components/contact/contact.js";
 import Footer from "./components/footer/footer.js";
 import scrollAnimation from "./utils/scrollAnimation.js";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-
 const app = document.querySelector("#app");
 
 app.appendChild(Header());
