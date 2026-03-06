@@ -1,5 +1,5 @@
 import "./footer.scss";
-import logoImage from "../../assets/images/logo.png"; // ← tambah ini
+import logoImage from "/src/assets/images/about.png"; // ← tambah ini
 
 const Footer = () => {
   const footer = document.createElement("footer");
