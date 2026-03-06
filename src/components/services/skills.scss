@@ -1,0 +1,140 @@
+@use "../../styles/base/index" as *;
+
+// ================================
+// SKILLS - MOBILE FIRST
+// ================================
+.skills {
+  background-color: $color-white;
+  padding: $spacing-xs 0;
+
+  // ================================
+  // CONTAINER
+  // ================================
+  &__container {
+    @include flex-column;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    gap: $spacing-2xl;
+  }
+
+  // ================================
+  // HEADER
+  // ================================
+  &__header {
+    @include flex-center;
+  }
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-regular;
+    color: $color-black;
+    text-align: center;
+
+    strong {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  // ================================
+  // GRID
+  // ================================
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+    width: 100%;
+  }
+
+  // ================================
+  // CARD
+  // ================================
+  &__card {
+    @include flex-column-center;
+    gap: $spacing-sm;
+    padding: $spacing-lg $spacing-md;
+    border: 2px solid $color-black;
+    border-radius: rem(8);
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &-icon {
+      font-size: $font-size-2xl;
+      color: $color-black;
+      transition: color 0.3s ease;
+    }
+
+    &-name {
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+      color: $color-black;
+      text-align: center;
+      transition: color 0.3s ease;
+    }
+
+    // Hover effect
+    &:hover {
+      background-color: $color-black;
+
+      .skills__card-icon {
+        color: $color-white;
+      }
+
+      .skills__card-name {
+        color: $color-white;
+      }
+    }
+  }
+
+  // ================================
+  // TABLET - md (768px ke atas)
+  // ================================
+  @include md {
+    &__container {
+      padding: 0 $spacing-xl;
+      gap: $spacing-3xl;
+    }
+
+    &__title {
+      font-size: $font-size-2xl;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: $spacing-lg;
+    }
+
+    &__card {
+      padding: $spacing-xl $spacing-lg;
+
+      &-icon {
+        font-size: $font-size-3xl;
+      }
+    }
+  }
+
+  // ================================
+  // DESKTOP - xl (1280px ke atas)
+  // ================================
+  @include xl {
+    &__container {
+      padding: 0 $spacing-2xl;
+    }
+
+    &__title {
+      font-size: $font-size-3xl;
+    }
+
+    &__grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: $spacing-2xl;
+    }
+
+    &__card {
+      padding: $spacing-xl $spacing-md;
+    }
+  }
+}

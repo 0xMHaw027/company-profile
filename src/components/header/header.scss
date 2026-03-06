@@ -1,0 +1,238 @@
+@use "../../styles/base/index" as *;
+
+// ================================
+// HEADER - MOBILE FIRST
+// ================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  border-bottom: 1.5px solid $color-gray-200;
+  z-index: 100;
+
+  // ================================
+  // NAV
+  // ================================
+  &__logo-text {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    color: $color-black;
+    width: rem(120); // ← fixed width sesuai panjang brand name
+    overflow: hidden; // ← sembunyikan teks yang belum diketik
+    white-space: nowrap; // ← teks tidak wrap ke bawah
+  }
+  &__nav {
+    @include flex-between;
+    padding: $spacing-md;
+  }
+
+  // ================================
+  // LOGO
+  // ================================
+  &__logo {
+    @include flex-center-y;
+    gap: $spacing-sm;
+    cursor: pointer;
+
+    &-icon {
+      @include flex-center;
+      font-size: $font-size-xl;
+      color: $color-black;
+    }
+
+    &-text {
+      font-size: $font-size-md;
+      font-weight: $font-weight-semibold;
+      color: $color-black;
+    }
+  }
+
+  // ================================
+  // MENU - hidden di mobile
+  // ================================
+  &__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $color-white;
+    border-bottom: 1px solid $color-gray-200;
+    padding: $spacing-sm 0;
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      width: 100%;
+    }
+
+    &-link {
+      display: block;
+      padding: $spacing-md $spacing-lg;
+      font-size: $font-size-base;
+      font-weight: $font-weight-medium;
+      color: $color-black;
+      border-bottom: 1px solid $color-gray-100;
+      transition:
+        background-color 0.3s ease,
+        padding-left 0.3s ease;
+
+      // Trick agar layout tidak shift
+      &::before {
+        content: attr(data-text);
+        font-weight: $font-weight-semibold;
+        visibility: hidden;
+        height: 0;
+        display: block;
+      }
+
+      &:hover {
+        background-color: $color-gray-100;
+        padding-left: $spacing-xl;
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+
+  // ================================
+  // BUTTON - hidden di mobile
+  // ================================
+  &__btn {
+    display: none;
+  }
+
+  // ================================
+  // HAMBURGER
+  // ================================
+  &__hamburger {
+    @include flex-column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: $spacing-xs;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $color-black;
+      transition: all 0.3s ease;
+    }
+
+    &.active span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+  }
+
+  // ================================
+  // TABLET - md (768px ke atas)
+  // ================================
+  @include md {
+    &__nav {
+      padding: $spacing-md $spacing-xl;
+    }
+
+    &__hamburger {
+      display: none;
+    }
+
+    &__menu {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      border-bottom: none;
+      padding: 0;
+      gap: $spacing-xl;
+
+      li {
+        width: auto;
+      }
+
+      &-link {
+        display: inline-block;
+        padding: 0;
+        border-bottom: none;
+        position: relative;
+        transition: font-weight 0.1s ease;
+
+        // Trick agar layout tidak shift
+        &::before {
+          content: attr(data-text);
+          font-weight: $font-weight-semibold;
+          visibility: hidden;
+          height: 0;
+          display: block;
+        }
+
+        // Garis dari tengah
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 1.3px;
+          background-color: $color-black;
+          transition: width 0.3s ease;
+        }
+
+        &:hover {
+          background-color: transparent;
+          padding-left: 0;
+          font-weight: $font-weight-semibold;
+
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__btn {
+      @include flex-center-y;
+      gap: $spacing-xs;
+      font-size: $font-size-base;
+      font-weight: $font-weight-semibold;
+      color: $color-white;
+      background-color: $color-black;
+      padding: $spacing-sm $spacing-lg;
+      border-radius: rem(8);
+      border: 2px solid $color-black;
+      transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+
+      &:hover {
+        background-color: transparent;
+        color: $color-black;
+      }
+    }
+  }
+
+  // ================================
+  // DESKTOP - xl (1280px ke atas)
+  // ================================
+  @include xl {
+    &__nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: $spacing-md $spacing-2xl;
+    }
+  }
+}

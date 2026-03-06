@@ -1,0 +1,195 @@
+@use "../../styles/base/index" as *;
+
+// ================================
+// CONTACT - MOBILE FIRST
+// ================================
+.contact {
+  background-color: $color-white;
+  padding: $spacing-4xl 0;
+
+  // ================================
+  // CONTAINER
+  // ================================
+  &__container {
+    @include flex-column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    gap: $spacing-3xl;
+  }
+
+  // ================================
+  // FORM WRAPPER
+  // ================================
+  &__form-wrapper {
+    @include flex-column;
+    gap: $spacing-md;
+    width: 100%;
+  }
+
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: $spacing-md;
+    border: 1px solid $color-gray-300;
+    border-radius: rem(6);
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    color: $color-black;
+    background-color: $color-white;
+    transition: border-color 0.3s ease;
+
+    &::placeholder {
+      color: $color-gray-400;
+    }
+
+    &:focus {
+      border-color: $color-black;
+    }
+  }
+
+  &__textarea {
+    min-height: rem(120);
+    resize: vertical;
+  }
+
+  // ================================
+  // BOTTOM (button + social)
+  // ================================
+  &__bottom {
+    @include flex-between;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    margin-top: $spacing-sm;
+  }
+
+  &__btn {
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $color-white;
+    background-color: $color-black;
+    padding: $spacing-sm $spacing-xl;
+    border-radius: rem(6);
+    border: 2px solid $color-black;
+    cursor: pointer;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background-color: transparent;
+      color: $color-black;
+    }
+  }
+
+  // ================================
+  // SOCIAL ICONS
+  // ================================
+  &__social {
+    @include flex-center-y;
+    gap: $spacing-sm;
+  }
+
+  &__social-link {
+    @include flex-center;
+    width: rem(42);
+    height: rem(42);
+    border: 2px solid $color-black;
+    border-radius: rem(6);
+    color: $color-black;
+    font-size: $font-size-md;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+    }
+  }
+
+  // ================================
+  // INFO
+  // ================================
+  &__info {
+    @include flex-column;
+    gap: $spacing-lg;
+  }
+
+  &__title {
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+    color: $color-black;
+
+    &-outline {
+      -webkit-text-stroke: 2px $color-black;
+      color: transparent;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__description {
+    font-size: $font-size-base;
+    font-weight: $font-weight-regular;
+    color: $color-gray-500;
+    line-height: $line-height-relaxed;
+  }
+
+  &__email,
+  &__phone {
+    font-size: $font-size-md;
+    font-weight: $font-weight-bold;
+    color: $color-black;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-gray-500;
+    }
+  }
+
+  // ================================
+  // TABLET - md (768px ke atas)
+  // ================================
+  @include md {
+    &__container {
+      padding: 0 $spacing-xl;
+    }
+
+    &__title {
+      font-size: $font-size-3xl;
+    }
+
+    &__textarea {
+      min-height: rem(150);
+    }
+  }
+
+  // ================================
+  // DESKTOP - xl (1280px ke atas)
+  // ================================
+  @include xl {
+    &__container {
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 0 $spacing-2xl;
+      gap: $spacing-4xl;
+    }
+
+    &__form-wrapper {
+      flex: 1;
+    }
+
+    &__info {
+      flex: 1;
+      padding-top: $spacing-sm;
+    }
+
+    &__title {
+      font-size: fluid(rem(32), rem(48));
+      line-height: $line-height-tight;
+    }
+  }
+}

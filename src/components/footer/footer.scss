@@ -1,0 +1,76 @@
+@use "../../styles/base/index" as *;
+
+// ================================
+// FOOTER - MOBILE FIRST
+// ================================
+.footer {
+  background-color: $color-black;
+  padding: $spacing-lg 0;
+
+  // ================================
+  // CONTAINER
+  // ================================
+  &__container {
+    @include flex-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+  }
+
+  // ================================
+  // LOGO
+  // ================================
+  &__logo {
+    @include flex-center-y;
+    gap: $spacing-sm;
+
+    img {
+      width: rem(24);
+      height: rem(24);
+      object-fit: contain;
+      filter: invert(1);
+    }
+  }
+
+  &__logo-text {
+    font-size: $font-size-base;
+    font-weight: $font-weight-semibold;
+    color: $color-white;
+  }
+
+  // ================================
+  // INFO
+  // ================================
+  &__info {
+    @include flex-column;
+    align-items: flex-end;
+    gap: $spacing-xs;
+  }
+
+  &__copyright,
+  &__made {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-regular;
+    color: $color-gray-400;
+  }
+
+  // ================================
+  // TABLET - md (768px ke atas)
+  // ================================
+  @include md {
+    &__container {
+      padding: 0 $spacing-xl;
+    }
+  }
+
+  // ================================
+  // DESKTOP - xl (1280px ke atas)
+  // ================================
+  @include xl {
+    &__container {
+      padding: 0 $spacing-2xl;
+    }
+  }
+}
