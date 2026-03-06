@@ -1,21 +1,45 @@
-import "./footer.scss";
-import logoImage from "/src/assets/images/about.png"; // ← tambah ini
+import "./about.scss";
+import aboutImage from "../../assets/images/about.png";
 
-const Footer = () => {
-  const footer = document.createElement("footer");
-  footer.classList.add("footer");
-  footer.innerHTML = `
-    <div class="footer__container">
-      <div class="footer__logo">
-        <img src="${logoImage}" alt="Logo"/>
-        <span class="footer__logo-text">0xMHaw</span>
+const About = () => {
+  const about = document.createElement("section");
+  about.classList.add("about");
+  about.setAttribute("id", "about");
+
+  about.innerHTML = `
+    <div class="about__container">
+
+      <div class="about__image">
+        <img src="${aboutImage}" alt="About Illustration"/>
       </div>
-      <div class="footer__info">
-        <span class="footer__copyright">© 2025-2026 Personal</span>
-        <span class="footer__made">Made in Figma</span>
+
+      <div class="about__content">
+        <h2 class="about__title">About <strong>Me</strong></h2>
+
+        <div class="about__description">
+          <p>
+            I'm a passionate, self-proclaimed designer who specializes
+            in full stack development (React.js & Node.js). I am very
+            enthusiastic about bringing the technical and visual aspects
+            of digital products to life.
+          </p>
+          <p>
+            I began my journey as a web developer in 2015, and since then,
+            I've continued to grow and evolve as a developer, taking on new
+            challenges and learning the latest technologies along the way.
+          </p>
+          <p>
+            When I'm not in full-on developer mode, you can find me hovering
+            around on twitter or on indie hacker, witnessing the journey of
+            early startups or enjoying some free time.
+          </p>
+        </div>
       </div>
+
     </div>
   `;
-  return footer;
+
+  return about;
 };
-export default Footer;
+
+export default About;
