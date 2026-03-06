@@ -1,4 +1,5 @@
 import "./hero.scss";
+import heroImage from "/src/assets/images/hero.png";
 
 const Hero = () => {
   const hero = document.createElement("section");
