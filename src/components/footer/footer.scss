@@ -5,7 +5,7 @@
 // ================================
 .footer {
   background-color: $color-black;
-  padding: $spacing-lg 0;
+  padding: $spacing-md 0;
 
   // ================================
   // CONTAINER
@@ -27,8 +27,8 @@
     gap: $spacing-sm;
 
     img {
-      width: rem(24);
-      height: rem(24);
+      width: rem(35);
+      height: rem(35);
       object-fit: contain;
       filter: invert(1);
     }

@@ -17,16 +17,16 @@ const Contact = () => {
           <button class="contact__btn">Get In Touch</button>
 
           <div class="contact__social">
-            <a href="#" class="contact__social-link" aria-label="Github" target="_blank">
+            <a href="https://github.com/0xMHaw027" class="contact__social-link" aria-label="Github" target="_blank">
               <i class="fa-brands fa-github"></i>
             </a>
-            <a href="#" class="contact__social-link" aria-label="Instagram" target="_blank">
+            <a href="https://www.instagram.com/hamwaluh27/" class="contact__social-link" aria-label="Instagram" target="_blank">
               <i class="fa-brands fa-instagram"></i>
             </a>
             <a href="#" class="contact__social-link" aria-label="Twitter" target="_blank">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
-            <a href="#" class="contact__social-link" aria-label="Whatsapp" target="_blank">
+            <a href="https://wa.me/6289508169258" class="contact__social-link" aria-label="Whatsapp" target="_blank">
               <i class="fa-brands fa-whatsapp"></i>
             </a>
           </div>

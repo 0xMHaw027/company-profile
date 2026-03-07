@@ -33,7 +33,7 @@ const Hero = () => {
           <a href="https://www.instagram.com/hamwaluh27/" class="hero__social-link" aria-label="Instagram" target="_blank">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="#" class="hero__social-link" aria-label="Whatsapp" target="_blank">
+          <a href="https://wa.me/6289508169258" class="hero__social-link" aria-label="Whatsapp" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
           </a>
         </div>

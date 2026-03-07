@@ -128,7 +128,7 @@
     }
 
     &__grid {
-      grid-template-columns: repeat(5, 1fr); // ← desktop: 5 kolom
+      grid-template-columns: repeat(4, 1fr); // ← desktop: 5 kolom
       gap: $spacing-2xl;
     }
 
