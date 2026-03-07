@@ -18,20 +18,13 @@ const About = () => {
 
         <div class="about__description">
           <p>
-            I'm a passionate, self-proclaimed designer who specializes
-            in full stack development (React.js & Node.js). I am very
-            enthusiastic about bringing the technical and visual aspects
-            of digital products to life.
+         I am a Frontend Developer specializing in JavaScript and modern web technologies, focused on building clean, responsive, and interactive web interfaces. My work revolves around creating user-friendly digital experiences while maintaining scalable and maintainable code.
           </p>
           <p>
-            I began my journey as a web developer in 2015, and since then,
-            I've continued to grow and evolve as a developer, taking on new
-            challenges and learning the latest technologies along the way.
+        Currently, I am expanding my expertise into AI Engineering. I am actively learning about machine learning, large language models, and AI tools to understand how intelligent systems can be integrated into modern applications.
           </p>
           <p>
-            When I'm not in full-on developer mode, you can find me hovering
-            around on twitter or on indie hacker, witnessing the journey of
-            early startups or enjoying some free time.
+         My long-term goal is to bridge the gap between web development and artificial intelligence, building smarter digital products that combine intuitive user interfaces with powerful AI capabilities.
           </p>
         </div>
       </div>

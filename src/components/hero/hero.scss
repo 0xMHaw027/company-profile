@@ -75,6 +75,7 @@
     color: $color-gray-500;
     line-height: $line-height-relaxed;
     max-width: rem(480);
+    opacity: 0.98;
   }
 
   // ================================
@@ -170,7 +171,7 @@
       line-height: $line-height-normal; // ← samakan dengan mobile
     }
     &__description {
-      padding-top: $spacing-xl; // ← beri jarak antara title dan description
+      padding-top: $spacing-xl;
     }
     &__social {
       padding-top: $spacing-3xl; // ← beri jarak antara description dan social icons

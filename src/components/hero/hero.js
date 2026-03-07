@@ -18,10 +18,7 @@ const Hero = () => {
           Based In <strong><span class="hero__typed" id="typed-location"></span></strong>
         </h1>
         <p class="hero__description">
-          Web Developer and AI Engineer focused on building modern web applications
-          and exploring intelligent systems. Passionate about technology,
-          problem-solving, and continuously learning to develop impactful
-          AI-driven solutions.
+         I am a Frontend Developer specializing in JavaScript and modern web technologies, focused on building clean and interactive web experiences. Alongside frontend development, I am currently deepening my knowledge in AI Engineering, exploring machine learning, AI tools, and intelligent systems. My goal is to combine web development with AI technologies to create smarter and more impactful digital products.
         </p>
         <div class="hero__social">
           <a href="https://github.com/0xMHaw027" class="hero__social-link" aria-label="Github" target="_blank">
