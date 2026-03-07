@@ -174,7 +174,7 @@
     }
     &__social {
       padding-top: $spacing-3xl; // ← beri jarak antara description dan social icons
-      gap: $spacing-xl;
+      gap: $spacing-lg;
     }
     &__social-link {
       width: rem(55);
