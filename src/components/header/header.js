@@ -15,9 +15,9 @@ const Header = () => {
       </div>
       <ul class="header__menu" id="headerMenu">
         <li><a href="#about" class="header__menu-link" data-text="About Me">About Me</a></li>
-        <li><a href="#services" class="header__menu-link" data-text="Services">Services</a></li>
+        <li><a href="#skills" class="header__menu-link" data-text="Skills">Skills</a></li>
         <li><a href="#project" class="header__menu-link" data-text="Project">Project</a></li>
-        <li><a href="#contact" class="header__menu-link" data-text="Contact Me">Contact Me</a></li>
+        <li><a href="#contact" class="header__menu-link" data-text="contact Me">Contact Me</a></li>
       </ul>
       <a href="#contact" class="header__btn">Contact Us</a>
       <button class="header__hamburger" id="hamburger" aria-label="Toggle Menu">
